@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#070d1a">
+  <meta name="robots" content="noindex,nofollow">
+  <title>MCQ Master | Admin Console</title>
+  <link rel="stylesheet" href="admin-login.css">
+</head>
+<body class="al-page">
+  <div class="al-glow al-glow-a"></div><div class="al-glow al-glow-b"></div>
+  <main class="al-shell">
+    <section class="al-intro">
+      <a class="al-brand" href="admin-login.html" aria-label="MCQ Master Admin">
+        <span class="al-mark">M</span>
+        <span><b>MCQ MASTER</b><small>ADMIN CONSOLE</small></span>
+      </a>
+      <div class="al-copy">
+        <span class="al-eyebrow">RESTRICTED AREA</span>
+        <h1>Manage the<br><em>whole exam hub.</em></h1>
+        <p>প্রশ্নব্যাংক, মক পরীক্ষা আর শিক্ষার্থীদের অগ্রগতি — সবকিছু এক কন্ট্রোল প্যানেল থেকে পরিচালনা করো।</p>
+      </div>
+      <ul class="al-points">
+        <li><span class="al-ico"><svg viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h10"/></svg></span><span><b>Question bank</b><small>প্রশ্ন যোগ, Import ও সম্পাদনা</small></span></li>
+        <li><span class="al-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span><b>Exam builder</b><small>সময়সূচি ঠিক করে পরীক্ষা তৈরি</small></span></li>
+        <li><span class="al-ico"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span><span><b>Student progress</b><small>Ranking ও ফলাফল ট্র্যাক করো</small></span></li>
+      </ul>
+    </section>
+
+    <section class="al-card" aria-label="Admin login">
+      <div class="al-top">
+        <span class="al-mark al-mark-sm">M</span>
+        <span class="al-secure"><i></i> ENCRYPTED SESSION</span>
+      </div>
+      <div class="al-shield" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.2 7.8-8 9-4.8-1.2-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+      <header class="al-head">
+        <h2>অ্যাডমিন লগইন</h2>
+        <p>শুধু অনুমোদিত Admin অ্যাকাউন্ট এই প্যানেলে ঢুকতে পারবে।</p>
+      </header>
+
+      <div id="alMessage" class="al-msg" role="status" aria-live="polite"></div>
+
+      <form id="alForm" novalidate>
+        <label for="alId">ইমেইল / Username / ফোন নম্বর</label>
+        <div class="al-field">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+          <input id="alId" type="text" autocomplete="username" placeholder="admin@example.com" required>
+        </div>
+
+        <label for="alPass">পাসওয়ার্ড</label>
+        <div class="al-field">
+          <svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+          <input id="alPass" type="password" autocomplete="current-password" placeholder="••••••••" required>
+          <button type="button" class="al-eye" id="alEye" aria-label="পাসওয়ার্ড দেখাও">দেখাও</button>
+        </div>
+
+        <div class="al-row">
+          <label class="al-check"><input type="checkbox" id="alRemember"><span>Remember me</span></label>
+          <button type="button" class="al-link" id="alForgot">পাসওয়ার্ড ভুলে গেছ?</button>
+        </div>
+
+        <button class="al-submit" id="alSubmit" type="submit"><span>Admin Console-এ ঢোকো</span><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      </form>
+
+      <a class="al-back" href="index.html">← স্টুডেন্ট পোর্টালে ফিরে যাও</a>
+    </section>
+    <footer>© 2026 MCQ MASTER <span>·</span> Admin Console</footer>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.58.0"></script>
+  <script src="js/supabase-config.js"></script>
+  <script src="js/admin-login.js"></script>
+</body>
+</html>

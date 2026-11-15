@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap');
+:root{--bg:#070d1a;--ink:#eaf2ff;--muted:#8fa3bf;--line:#ffffff1a;--teal:#2dd4bf;--indigo:#6366f1;--bad:#ff8a80;--good:#5eead4}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,'Hind Siliguri',system-ui,sans-serif;color:var(--ink)}
+.al-page{min-height:100vh;min-height:100dvh;background:var(--bg);position:relative;overflow-x:hidden}
+.al-page::before{content:"";position:fixed;inset:0;background-image:linear-gradient(#ffffff08 1px,transparent 1px),linear-gradient(90deg,#ffffff08 1px,transparent 1px);background-size:44px 44px;-webkit-mask-image:radial-gradient(ellipse at 50% 40%,#000 25%,transparent 75%);mask-image:radial-gradient(ellipse at 50% 40%,#000 25%,transparent 75%);pointer-events:none}
+.al-glow{position:fixed;width:520px;height:520px;border-radius:50%;filter:blur(110px);opacity:.38;pointer-events:none;animation:drift 16s ease-in-out infinite alternate}
+.al-glow-a{background:#0d9488;top:-160px;left:-120px}.al-glow-b{background:#4f46e5;bottom:-200px;right:-140px;animation-delay:-8s}
+@keyframes drift{to{transform:translate(50px,40px) scale(1.12)}}
+.al-shell{position:relative;width:min(1080px,calc(100% - 40px));min-height:100vh;min-height:100dvh;margin:auto;display:grid;grid-template-columns:minmax(0,1fr) 430px;column-gap:80px;align-items:center;padding:48px 0 70px}
+.al-brand{display:inline-flex;align-items:center;gap:13px;text-decoration:none;color:var(--ink)}
+.al-mark{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(145deg,var(--teal),var(--indigo));color:#06101f;font-size:25px;font-weight:800;box-shadow:0 10px 30px #2dd4bf30}
+.al-mark-sm{width:36px;height:36px;font-size:18px;border-radius:11px}
+.al-brand b{display:block;font-size:17px;letter-spacing:.8px}.al-brand small{display:block;margin-top:3px;font-size:9.5px;letter-spacing:2px;color:var(--teal);font-weight:700}
+.al-copy{margin-top:80px;max-width:500px}.al-eyebrow{font-size:11px;font-weight:800;letter-spacing:2.4px;color:var(--teal)}
+.al-copy h1{font-size:clamp(40px,5vw,62px);line-height:1.08;letter-spacing:-2.4px;margin:16px 0}
+.al-copy h1 em{font-style:normal;background:linear-gradient(100deg,var(--teal),#8b93ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.al-copy p{font-family:'Hind Siliguri',sans-serif;font-size:18px;line-height:1.8;color:var(--muted);max-width:450px;margin:0}
+.al-points{list-style:none;padding:0;margin:48px 0 0;display:grid;gap:18px}
+.al-points li{display:flex;align-items:center;gap:14px}
+.al-ico{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:#ffffff0d;border:1px solid var(--line)}
+.al-ico svg{width:19px;height:19px;fill:none;stroke:var(--teal);stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.al-points b,.al-points small{display:block}.al-points b{font-size:13.5px}.al-points small{font-family:'Hind Siliguri',sans-serif;font-size:13px;color:var(--muted);margin-top:2px}
+.al-card{position:relative;background:linear-gradient(160deg,#ffffff12,#ffffff06);border:1px solid #ffffff1c;border-radius:24px;padding:30px;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:0 30px 80px #00000066,inset 0 1px 0 #ffffff14}
+.al-card::before{content:"";position:absolute;left:30px;right:30px;top:-1px;height:2px;background:linear-gradient(90deg,transparent,var(--teal),var(--indigo),transparent);border-radius:2px}
+.al-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}.al-top .al-mark-sm{display:none}
+.al-secure{margin-left:auto;font-size:9.5px;font-weight:800;letter-spacing:1.4px;color:var(--muted);display:flex;align-items:center;gap:8px}
+.al-secure i{width:7px;height:7px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 4px #2dd4bf26}
+.al-shield{width:58px;height:58px;border-radius:18px;display:grid;place-items:center;background:linear-gradient(145deg,#2dd4bf22,#6366f122);border:1px solid #2dd4bf40;margin-bottom:16px}
+.al-shield svg{width:28px;height:28px;fill:none;stroke:var(--teal);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.al-head h2{font-family:'Hind Siliguri',sans-serif;font-size:27px;line-height:1.3;margin:0 0 5px}
+.al-head p{font-family:'Hind Siliguri',sans-serif;font-size:14px;color:var(--muted);margin:0 0 20px;line-height:1.6}
+.al-msg{display:none;padding:10px 12px;border-radius:10px;font:13px/1.6 'Hind Siliguri',sans-serif;margin-bottom:14px}
+.al-msg.show{display:block}.al-msg.error{color:var(--bad);background:#ff52522b;border:1px solid #ff8a8055}.al-msg.success{color:var(--good);background:#2dd4bf1f;border:1px solid #2dd4bf55}.al-msg.info{color:#a5b4fc;background:#6366f126;border:1px solid #6366f155}
+#alForm{display:grid;gap:9px}
+#alForm>label{font:600 13px 'Hind Siliguri',sans-serif;color:#c4d3ea;margin-top:6px}
+.al-field{position:relative;display:flex;align-items:center}
+.al-field>svg{position:absolute;left:14px;width:18px;height:18px;fill:none;stroke:#7d91ae;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;pointer-events:none;transition:.2s}
+.al-field input{width:100%;height:50px;padding:0 74px 0 44px;border:1px solid var(--line);border-radius:12px;background:#0a1224b3;color:var(--ink);font:15px Inter,'Hind Siliguri',sans-serif;outline:none;transition:.2s}
+.al-field input::placeholder{color:#5d7090}
+.al-field input:focus{border-color:var(--teal);box-shadow:0 0 0 4px #2dd4bf1c;background:#0b1530}
+.al-field:focus-within>svg{stroke:var(--teal)}
+.al-eye{position:absolute;right:8px;border:0;background:transparent;color:var(--teal);font:600 12px 'Hind Siliguri',sans-serif;cursor:pointer;padding:8px}
+.al-row{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:6px 0 8px}
+.al-check{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--muted);cursor:pointer}.al-check input{accent-color:var(--teal);width:16px;height:16px}
+.al-link{border:0;background:none;padding:0;color:var(--teal);font:600 12.5px 'Hind Siliguri',sans-serif;cursor:pointer}.al-link:hover{text-decoration:underline}
+.al-submit{height:52px;border:0;border-radius:13px;background:linear-gradient(110deg,var(--teal),#6d7bff);color:#05101f;font:700 15px 'Hind Siliguri',sans-serif;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;box-shadow:0 12px 30px #2dd4bf33;transition:.2s}
+.al-submit svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;transition:.2s}
+.al-submit:hover{transform:translateY(-1px);filter:brightness(1.07)}.al-submit:hover svg{transform:translateX(3px)}
+.al-submit:disabled{opacity:.6;cursor:wait;transform:none}
+.al-back{display:block;text-align:center;margin-top:20px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);text-decoration:none;font:13px 'Hind Siliguri',sans-serif}.al-back:hover{color:var(--ink)}
+footer{position:absolute;bottom:22px;left:0;color:#5f7090;font-size:10px;letter-spacing:.5px}footer span{padding:0 5px}
+@media(max-width:850px){.al-shell{grid-template-columns:1fr;max-width:470px;padding:28px 0 64px}.al-intro{display:none}.al-top .al-mark-sm{display:grid}footer{left:50%;transform:translateX(-50%);white-space:nowrap}}
+@media(max-width:420px){.al-shell{width:calc(100% - 24px);padding-top:14px}.al-card{padding:24px 18px;border-radius:20px}.al-head h2{font-size:24px}}
+@media(prefers-reduced-motion:reduce){.al-glow{animation:none}.al-submit,.al-submit svg{transition:none}}

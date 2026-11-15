@@ -1,0 +1,24 @@
+/* MCQ Master — Profile sheet (student + admin) */
+.profile-btn{display:inline-flex;align-items:center;gap:8px;padding:5px 12px 5px 5px!important;border-radius:99px!important}
+.p-av{width:30px;height:30px;border-radius:50%;background:var(--brand-l);color:var(--brand-d);display:grid;place-items:center;font-weight:700;font-size:14px;overflow:hidden;flex:none}
+.p-av img,.pf-avatar img{width:100%;height:100%;object-fit:cover;display:block}
+.pf-sheet{max-width:560px}
+.pf-top{display:flex;align-items:center;gap:16px;margin:4px 0 18px}
+.pf-avatar{width:84px;height:84px;border-radius:50%;background:var(--brand-l);color:var(--brand);display:grid;place-items:center;font-size:32px;font-weight:700;overflow:hidden;flex:none;border:3px solid #e9b44c}
+.pf-photo-btns{display:grid;gap:6px;justify-items:start}.pf-photo-btns .hint{color:var(--muted);font-size:12.5px}
+.pf-photo-btns .row{display:flex;gap:8px;flex-wrap:wrap}
+.pf-file{display:none}
+.pf-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 12px}.pf-grid .wide{grid-column:1/-1}
+.pf-f{margin-bottom:10px}.pf-f label{display:block;font-weight:600;font-size:14px;margin-bottom:4px}
+.pf-f .req::after{content:" *";color:#c2410c}
+.pf-f input,.pf-f select{width:100%;min-height:46px;padding:10px 12px;border:1.5px solid var(--line);border-radius:10px;background:#fff}
+.pf-f input:disabled{background:#f1f4f4;color:var(--muted)}
+.pf-f input:focus-visible,.pf-f select:focus-visible{outline:3px solid #e9b44c;outline-offset:1px;border-color:var(--brand)}
+.pf-f .bad{border-color:#c2410c}.pf-err{color:#c2410c;font-size:12.5px;min-height:1.1em;margin-top:2px}
+.pf-save{width:100%;padding:13px;font-size:16px;margin:4px 0 6px}
+.pf-pass{margin-top:16px;border:1px solid var(--line);border-radius:12px;padding:0 14px}
+.pf-pass summary{cursor:pointer;font-weight:700;padding:13px 0;list-style:none}.pf-pass summary::-webkit-details-marker{display:none}
+.pf-pass summary::after{content:"＋";float:right;color:var(--brand)}.pf-pass[open] summary::after{content:"−"}
+.pf-pass form{padding-bottom:12px}
+.pf-signout{width:100%;margin-top:18px;padding:12px}
+@media(max-width:480px){.pf-grid{grid-template-columns:1fr}.p-label{display:none}.profile-btn{padding:5px!important}}

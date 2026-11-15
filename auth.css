@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap');
+:root{--brand:#0f766e;--brand2:#0b5f59;--ink:#172b35;--muted:#6c7e86;--line:#dce7e8;--paper:#fff;--bg:#f3f7f7;--bad:#b42318;--good:#067647}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,'Hind Siliguri',system-ui,sans-serif;color:var(--ink)}
+.auth-page{min-height:100vh;background:radial-gradient(ellipse at 12% 15%,#dcefeb 0,transparent 42%),linear-gradient(135deg,#f5f8f8,#edf3f4)}
+.auth-shell{width:min(1080px,calc(100% - 40px));min-height:100vh;margin:auto;display:grid;grid-template-columns:minmax(0,1fr) 430px;column-gap:76px;align-items:center;padding:48px 0 66px;position:relative}
+.brand{display:inline-flex;align-items:center;gap:13px;text-decoration:none;color:var(--ink)}
+.brand-mark,.mobile-mark{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(145deg,#159889,#075e57);color:white;font-size:25px;font-weight:800;box-shadow:0 8px 20px #0f766e30}
+.brand b{display:block;font-size:17px;letter-spacing:.7px}.brand small{display:block;margin-top:3px;font-size:9px;letter-spacing:1.1px;color:var(--muted);font-weight:700}
+.intro-copy{margin-top:86px;max-width:490px}.eyebrow{font-size:11px;font-weight:800;letter-spacing:2px;color:var(--brand)}
+.intro-copy h1{font-size:clamp(42px,5vw,64px);line-height:1.08;letter-spacing:-2.5px;margin:17px 0;color:#152c36}
+.intro-copy h1 em{font-style:normal;color:var(--brand)}
+.intro-copy p{font-family:'Hind Siliguri',sans-serif;font-size:18px;line-height:1.8;color:#63757c;max-width:440px;margin:0}
+.intro-points{display:grid;gap:20px;margin-top:52px}.intro-points>div{display:flex;align-items:center;gap:13px}.point-icon{width:36px;height:36px;border-radius:11px;background:#dff2ef;color:var(--brand);display:grid;place-items:center;font-weight:800}
+.intro-points b,.intro-points small{display:block}.intro-points b{font-size:13px}.intro-points small{font-family:'Hind Siliguri',sans-serif;font-size:13px;color:var(--muted);margin-top:2px}
+.auth-panel{background:var(--paper);border:1px solid #e3ebec;border-radius:20px;padding:30px;box-shadow:0 20px 60px #173c4410}
+.panel-top{display:flex;justify-content:flex-end;align-items:center;margin-bottom:24px}.mobile-mark{display:none;width:36px;height:36px;font-size:18px}
+.secure-label{font-size:9px;font-weight:800;letter-spacing:1px;color:#74878c;display:flex;align-items:center;gap:7px}.secure-label i{width:7px;height:7px;border-radius:50%;background:#18a77d;box-shadow:0 0 0 4px #e3f7ef}
+.auth-heading h2{font-family:'Hind Siliguri',sans-serif;font-size:27px;line-height:1.35;margin:0 0 5px}.auth-heading p{font-family:'Hind Siliguri',sans-serif;color:var(--muted);font-size:14px;margin:0 0 22px}
+.auth-tabs{display:grid;grid-template-columns:1fr 1fr;background:#f1f5f5;padding:4px;border-radius:11px;margin-bottom:20px;gap:4px}
+.auth-tab{border:0;border-radius:8px;background:transparent;color:#728187;padding:10px 8px;font:600 13px 'Hind Siliguri',sans-serif;cursor:pointer}
+.auth-tab.active{background:#fff;color:var(--brand);box-shadow:0 2px 7px #122b3314}
+.auth-form{display:grid;gap:9px}.auth-form.is-hidden{display:none}
+.auth-form>label,.name-grid label{font-family:'Hind Siliguri',sans-serif;font-size:13px;font-weight:600;color:#344b53;margin-top:4px}
+.auth-form label small{font-weight:400;color:#89979b}
+.auth-form input:not([type=checkbox]){width:100%;height:46px;border:1px solid var(--line);border-radius:9px;padding:0 13px;background:#fbfdfd;font:14px Inter,'Hind Siliguri',sans-serif;color:var(--ink);outline:none;transition:.2s}
+.auth-form input:focus{border-color:#42a69d;box-shadow:0 0 0 3px #0f766e16;background:white}
+.auth-form input::placeholder{color:#a6b3b6}
+.password-wrap{position:relative}.password-wrap input{padding-right:66px!important}
+.password-toggle{position:absolute;right:8px;top:50%;transform:translateY(-50%);border:0;background:transparent;color:var(--brand);font:600 12px 'Hind Siliguri',sans-serif;cursor:pointer;padding:7px}
+.login-options{display:flex;justify-content:space-between;align-items:center;margin:4px 0 7px;gap:8px}
+.check-label{display:flex;align-items:center;gap:7px;font-size:12px;color:#65777e;cursor:pointer}.check-label input{accent-color:var(--brand);width:15px;height:15px}
+.text-action{border:0;background:none;padding:0;color:var(--brand);font:600 12px 'Hind Siliguri',sans-serif;cursor:pointer}.text-action:hover{text-decoration:underline}
+.auth-submit{height:47px;border:0;border-radius:10px;background:linear-gradient(110deg,#0f766e,#119486);color:#fff;font:700 14px 'Hind Siliguri',sans-serif;cursor:pointer;box-shadow:0 7px 17px #0f766e28;transition:.2s;margin-top:7px}
+.auth-submit:hover{background:linear-gradient(110deg,#0b655e,#0f766e);transform:translateY(-1px)}.auth-submit:disabled{opacity:.65;cursor:wait;transform:none}
+.auth-submit span{font:700 17px Inter;margin-left:6px}
+.switch-hint{text-align:center;font:13px 'Hind Siliguri',sans-serif;color:var(--muted);margin:9px 0 0}
+.password-hint{font:11px 'Hind Siliguri',sans-serif;color:#819096;margin:0 0 4px}
+.panel-foot{border-top:1px solid #edf1f1;padding-top:15px;margin:20px 0 0;text-align:center;font:11px 'Hind Siliguri',sans-serif;color:#8a999d;line-height:1.6}
+.auth-message{display:none;padding:10px 12px;border-radius:9px;font:12px/1.6 'Hind Siliguri',sans-serif;margin:0 0 14px}.auth-message.show{display:block}.auth-message.error{color:var(--bad);background:#fff1f0;border:1px solid #ffd6d2}.auth-message.success{color:var(--good);background:#ecfdf3;border:1px solid #b7ebcd}.auth-message.info{color:#175cd3;background:#eff8ff;border:1px solid #b2ddff}
+.name-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.name-grid>div{display:grid;gap:9px}
+footer{position:absolute;bottom:22px;left:0;color:#91a0a4;font-size:10px;letter-spacing:.4px}footer span{padding:0 5px}
+@media(max-width:850px){.auth-shell{grid-template-columns:1fr;max-width:470px;padding:30px 0 60px}.auth-intro{display:none}.mobile-mark{display:grid}.auth-panel{padding:25px 22px}.panel-top{justify-content:space-between;margin-bottom:18px}footer{left:50%;transform:translateX(-50%);white-space:nowrap}}
+@media(max-width:420px){.auth-shell{width:calc(100% - 24px);padding-top:16px}.auth-panel{padding:22px 17px;border-radius:16px}.name-grid{grid-template-columns:1fr}.name-grid>div{gap:8px}.auth-heading h2{font-size:24px}}
